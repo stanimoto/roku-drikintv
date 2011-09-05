@@ -33,7 +33,7 @@ Function ShowHomeScreen(screen) As Integer
                 print "Unknown event"
             endif
         else
-            print "wrong type.... type=";msg.GetType(); " msg: "; msg.GetMessage()
+            print "wrong type.... type="; msg.GetType(); " msg: "; msg.GetMessage()
         endif
     end while
     screen.Close()
@@ -88,7 +88,7 @@ Function ShowVideo(video)
     while true
         msg = wait(0, screen.getMessagePort())
         if type(msg) = "roVideoScreenEvent"
-            print "Event: "; msg.GetType(); " msg: "; msg.GetMessage(); " idx: "; msg.GetIndex(); " " msg.GetData()
+            print "Event: "; msg.GetType(); " msg: "; msg.GetMessage(); " idx: "; msg.GetIndex(); " "; msg.GetData()
 
             if msg.isScreenClosed()
                 print "Screen closed"
@@ -99,7 +99,7 @@ Function ShowVideo(video)
                 print "Unknown event"
             endif
         else
-            print "wrong type.... type=";msg.GetType(); " msg: "; msg.GetMessage()
+            print "wrong type.... type="; msg.GetType(); " msg: "; msg.GetMessage()
         endif
     end while
 End Function
